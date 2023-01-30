@@ -1,0 +1,22 @@
+<app-add-task
+
+></app-add-task>
+
+<div class="task" *ngFor="let Task of task1"
+
+>
+
+
+  <h3 >
+    {{ Task.task }}
+
+    <fa-icon
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+      (click)="delete(Task.id)"
+    >
+    </fa-icon>
+  </h3>
+
+  <p>{{ Task.date }}</p>
+</div>
